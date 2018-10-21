@@ -1,0 +1,3 @@
+name = Dynamic Image Updater for News Content Type
+description = Dynamic Handling for missing Images when creating a new instance of type "News"
+core = 7.x

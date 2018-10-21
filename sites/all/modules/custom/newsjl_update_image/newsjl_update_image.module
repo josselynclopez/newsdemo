@@ -1,0 +1,33 @@
+<?php 
+
+/*
+* Implements: Hook Form Alter
+* Triggers callback _newsjl_up_image
+* after saving/updating node of type "News"
+*/
+function newsjl_update_image_form_alter(&$form, &$form_state, $form_id) {
+    // Checking form_id
+    if ($form_id == 'news_node_form') {
+        // Adding custom callback function.
+        $form['actions']['submit']['#submit'][] = '_newsjl_up_image';
+    }
+}
+
+/*
+* News Callback Function to Dynamically set a default image 
+* if editor doesn't set one after saving/updating 
+* node of type "News"
+*/
+function _newsjl_up_image($form, &$form_state) {
+	$nid = $form_state['values']['nid'];
+    $node = node_load($nid);
+
+    if ((!empty($node) && isset($node)) && (empty($node->field_image) || !isset($node->field_image)) ) {
+		$filename = 'concert.jpg';
+		$image_object = file_get_contents('https://images.unsplash.com/photo-1522694013927-350c454fa94b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aec6de72f0a6af80fa241e9508bab14f&auto=format&fit=crop&w=900&h=900&q=80');
+		$file = file_save_data($image_object, 'public://' . $filename, FILE_EXISTS_RENAME);
+		$file->uid = $node->uid;
+		$node->field_image['und'][0] = (array)$file;
+		field_attach_update('node', $node);
+    }
+}

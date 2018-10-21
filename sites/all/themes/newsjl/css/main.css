@@ -1,0 +1,163 @@
+/* line 2, ../sass/main.scss */
+html {
+  font-family: 'Josefin Sans', sans-serif;
+}
+/* line 4, ../sass/main.scss */
+html a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  color: #333;
+}
+/* line 9, ../sass/main.scss */
+html a:hover {
+  text-decoration: underline;
+}
+/* line 12, ../sass/main.scss */
+html a:visited {
+  color: #ccc;
+}
+/* line 15, ../sass/main.scss */
+html a:active {
+  text-decoration: underline;
+  color: #ccc;
+}
+/* line 20, ../sass/main.scss */
+html *:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 25, ../sass/main.scss */
+html .newsjl_clear {
+  clear: both;
+}
+/* line 28, ../sass/main.scss */
+html .newsjl_news_title {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+/* line 33, ../sass/main.scss */
+html .fa-bars {
+  color: #333;
+  font-size: 1.3em;
+}
+/* line 37, ../sass/main.scss */
+html .sidr {
+  font-family: 'Josefin Sans', sans-serif;
+}
+/* line 39, ../sass/main.scss */
+html .sidr .sidr-inner {
+  padding-bottom: 0px;
+}
+/* line 41, ../sass/main.scss */
+html .sidr .sidr-inner .sidr-class-element-invisible {
+  font-size: 1.3em;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+/* line 49, ../sass/main.scss */
+html .sidr .sidr-inner ul {
+  margin-bottom: 0px;
+}
+
+/* line 56, ../sass/main.scss */
+body.newsjl {
+  color: #333;
+}
+/* line 60, ../sass/main.scss */
+body.newsjl.page-news #page-title {
+  text-transform: uppercase;
+  padding-bottom: 35px;
+}
+/* line 65, ../sass/main.scss */
+body.newsjl p.skip-link__wrapper {
+  display: none;
+}
+/* line 68, ../sass/main.scss */
+body.newsjl #page {
+  max-width: none;
+}
+/* line 71, ../sass/main.scss */
+body.newsjl #page header #name-and-slogan {
+  display: none;
+}
+/* line 74, ../sass/main.scss */
+body.newsjl #page header a.header__logo {
+  display: none;
+}
+/* line 77, ../sass/main.scss */
+body.newsjl #page header .submitted {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+/* line 84, ../sass/main.scss */
+body.newsjl #page #main #content h1.page-title {
+  display: none;
+}
+/* line 87, ../sass/main.scss */
+body.newsjl #page #main #content #page-title {
+  text-transform: uppercase;
+}
+/* line 97, ../sass/main.scss */
+body.newsjl #page #main #content article.node-news img {
+  border: 2px solid #333;
+  padding: 5px;
+  box-sizing: border-box;
+}
+/* line 113, ../sass/main.scss */
+body.newsjl #page #main #navigation {
+  color: #ccc;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #ccc;
+}
+/* line 120, ../sass/main.scss */
+body.newsjl #page #main #navigation nav ul {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+/* line 124, ../sass/main.scss */
+body.newsjl #page #main #navigation nav ul li {
+  float: none;
+  margin: 0 1%;
+  padding: 0;
+}
+/* line 128, ../sass/main.scss */
+body.newsjl #page #main #navigation nav ul li.active-trail {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 768px) {
+  /* line 143, ../sass/main.scss */
+  body.newsjl.page-news #page-title {
+    text-transform: uppercase;
+    padding-bottom: 35px;
+  }
+  /* line 149, ../sass/main.scss */
+  body.newsjl #main #content {
+    padding: 80px 10px 0px;
+  }
+}
+@media all and (min-width: 769px) {
+  /* line 166, ../sass/main.scss */
+  body.newsjl #main #content {
+    padding: 80px;
+  }
+  /* line 169, ../sass/main.scss */
+  body.newsjl #main #content .view-news .view-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+  /* line 177, ../sass/main.scss */
+  body.newsjl #main #content .view-news .view-content .views-row {
+    width: 33%;
+  }
+}
